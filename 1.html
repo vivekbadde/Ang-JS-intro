@@ -1,0 +1,78 @@
+<!-- This html displays forms with input field and a submit button and appends to the table showing dyanamic values -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script><!-- Installation jquery IS requred -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+  <title>1</title>
+
+
+
+  <script type="text/javascript">
+    angular.module("myApps",[])
+    .controller("myCtrl",function($scope) {/*All the modifications are done here*/
+        $scope.name="";
+        $scope.age="";
+    
+    });
+  </script>
+
+
+
+</head>
+<body ng-app="myApps">
+  <div class="container" ng-controller="myCtrl"><!-- Bootstrap:do u remember? -->
+    
+      <div><h2>Enter your Input Details here</h2></div>
+
+
+
+
+      <form class="form" method="post" >
+        <div class="form-group">
+          
+            
+                   Name: <input type="text" class="form-control" ng-model="name" placeholder="Enter the Name here">   
+                    
+
+
+               
+          
+                 Age:   <input type="text" class="form-control" ng-model="age" placeholder="Age">
+                
+
+<br><br><br>
+               
+
+ <br><br><br>
+      </div>
+    </form>
+
+    <div>
+          <table class="table table-bordered">
+              <thead>
+                  <tr>
+                      <th>Name</th>
+                      <th>Age</th>
+                  </tr>
+              </thead>
+            <tbody>
+                  <tr>
+                      <td>{{name}}</td>
+                      <td>{{age}}</td>
+                  </tr>
+            </tbody>
+          </table>
+    </div>
+</div>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script><!-- Installation jquery IS requred -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+	<title>3</title>
+</head>
+<body ng-app="myApp">
+
+<div ng-controller="myCtrl">
+<form class="form" method="post" >
+        <div class="form-group">
+Enter Name: <input ng-model="name" placeholder="Enter the Name here"><br>
+Enter Name: <input ng-model="empId" placeholder="Enter Employee ID here"><br>
+Enter Name: <input ng-model="Designation" placeholder="Enter Designation here"><br>
+ </div>
+    </form>
+
+
+<script type="text/javascript">
+	var app=angular.module("myApp",[]);
+	app.controller("myCtrl",function($scope){
+		$scope.name="";
+		$scope.empId="";
+		$scope.Designation="";
+	});
+</script>
+
+<div>
+          <table class="table table-bordered">
+              <thead>
+                  <tr>
+                      <th>Name</th>
+                      <th>Emp. ID</th>
+                      <th>Designation</th>
+                  </tr>
+              </thead>
+            <tbody>
+                  <tr>
+                      <td>{{name}}</td>
+                      <td>{{empId}}</td>
+                      <td>{{Designation}}</td>
+                  </tr>
+            </tbody>
+          </table>
+    </div>
+</div>
+</body>
+</html>
